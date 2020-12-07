@@ -1,5 +1,6 @@
-# from Card import Card
-# from Deck import Deck
+from card import Card
+from deck import Deck
+from player import Player
 
 # deck1 = Deck()
 # deck1.shuffle()

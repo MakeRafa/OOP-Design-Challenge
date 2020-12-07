@@ -5,7 +5,7 @@ class Card:
         self.value = card_value
 
     def show_card(self):
-            print(f"{self.value} of {self.suit}")
+        print(f"{self.value} of {self.suit}")
         
     
 

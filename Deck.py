@@ -1,4 +1,4 @@
-from Card import Card
+from card import Card
 
 import random
 
@@ -10,10 +10,10 @@ class Deck():
 # deck method that creates an individual card for each suit up to 14
     def build_deck(self):
         suits = ["Spades","Hearts", "Clubs","Diamonds"]
-        for suit in suits:
+        for s in suits:
             for value in range(1,11):
                 # adding an instance of class Card into cards list
-                self.deck_of_cards.append(Card(suit,value))
+                self.deck_of_cards.append(Card(s,value))
 
     def cardAmount(self):
         print(f"Cards in Deck: {len(self.deck_of_cards)}")
@@ -21,7 +21,6 @@ class Deck():
     def cards(self):
         for card in self.deck_of_cards:
             card.show_card()
-        print(f"Cards in Deck: {len(self.deck_of_cards)}")
 
     def shuffle(self):
         random.shuffle(self.deck_of_cards)
@@ -34,8 +33,10 @@ class Deck():
 
 # deck = Deck()
 # deck.dealCard()
+# deck.cards()
+# deck.cardAmount()
 # card1 = deck.dealCard()
-# print(card1.show_card())
+# card1.show_card()
 
 # card2 = deck.dealCard()
 # print(card2.show_card())

@@ -1,9 +1,20 @@
-from card import Card
 from deck import Deck
 from player import Player
 
-# deck1 = Deck()
-# deck1.shuffle()
+class Casino(Deck):
+    def __init__(self):
+        self.entrance_fee = 0
+        
+    def check_age(self, age):
+        if age < 18:
+            print("Sorry you cannot enter")
+        elif age > 18 < 65:
+            self.entrance_fee = 30
+        elif age > 65:
+            self.entrance_fee = 15
 
-# card1 = deck1.dealCard()
+    def dealCard(self):
+        return self.deck_of_cards.pop(0)
 
+deck = Deck()
+deck.cardAmount()

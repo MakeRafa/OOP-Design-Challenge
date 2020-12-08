@@ -1,10 +1,11 @@
 from deck import Deck
 from player import Player
 
-class Casino(Deck):
+class Casino():
     def __init__(self):
-        self.entrance_fee = 0
-        
+        self.__entrance_fee = 0
+        self.tables = []
+    
     def check_age(self, age):
         if age < 18:
             print("Sorry you cannot enter")
@@ -13,8 +14,20 @@ class Casino(Deck):
         elif age > 65:
             self.entrance_fee = 15
 
-    def dealCard(self):
-        return self.deck_of_cards.pop(0)
+    def welcome(self):
+        print("Welcome to the casino!")
 
-deck = Deck()
-deck.cardAmount()
+# lasVegas = Casino()
+# lasVegas.welcome()
+# create_deck = Deck()
+# create_deck.shuffle()
+# player = Player("rafa", 100, 18)
+# dealer = Player("Afar", 1000, 70)
+# create_deck.cardAmount()
+# player.drawCard(create_deck)
+# rafa.drawCard(create_deck)
+# dealer.drawCard(create_deck)
+# dealer.drawCard(create_deck)
+# create_deck.cardAmount()
+# rafa.play(dealer)
+
